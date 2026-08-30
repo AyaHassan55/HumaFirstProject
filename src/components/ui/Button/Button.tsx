@@ -10,7 +10,7 @@ disabled?:boolean;
 const Button=({text, variant, onClick, disabled}:IProps)=> {
   return (
      <button
-      className={`button button-${variant}`}
+      className={`button-${variant}`}
       onClick={onClick}
       disabled={disabled}
     >
