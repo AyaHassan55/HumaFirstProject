@@ -3,12 +3,40 @@
 import './App.css'
 import Button from './components/ui/Button/Button'
 import Card from './components/ui/Card/Card'
+import Table from './components/ui/Table/Table';
 
 
 function App() {
+   const students = [
+    {
+      name: "Ahmed",
+      age: 20,
+      city: "Cairo",
+    },
+    {
+      name: "Sara",
+      age: 21,
+      city: "Giza",
+    },
+    {
+      name: "Omar",
+      age: 19,
+      city: "Alexandria",
+    },
+    {
+      name: "Mariam",
+      age: 22,
+      city: "Mansoura",
+    },
+  ];
+
+  const columns = ["Name", "Age", "City"];
     return (
-    <div className="app-container">
+      <>
       <h1>Our Courses</h1>
+     
+    <div className="app-container">
+      
 
       <Card
         title="React Course"
@@ -33,7 +61,12 @@ function App() {
           onClick={() => alert("More Information")}
         />
       </Card>
+      
     </div>
+    <Table  columns={columns}
+        data={students}
+        striped={true} />
+     </>
   );
 }
 
