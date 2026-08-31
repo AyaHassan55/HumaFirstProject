@@ -7,7 +7,7 @@ interface CardProps {
   title: string;
   description: string;
   image?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Card = ({ title, description, image, children }: CardProps) => {
